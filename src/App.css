@@ -48,5 +48,8 @@
   height: 150px;
   overflow-y: scroll;
   padding-bottom: 20px;
-  
+}
+
+.cardWidth{
+  width: 400px;
 }

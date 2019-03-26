@@ -30,7 +30,7 @@ const Body = (props) => {
 
 const CardCard = (props) => {
     return(
-        <Card raised={true} style={{width: '250px', marginTop: '20px'}} id={props.id}>
+        <Card raised={true} style={{marginTop: '20px'}} id={props.id} className="cardWidth">
             <CardHeader title={props.title}/>
             <CardContent className="cardStyling">
                 {props.description}
