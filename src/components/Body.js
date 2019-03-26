@@ -6,15 +6,17 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import _ from 'lodash';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import '../App.css';
 
 
 const Body = (props) => {
     if(props.data.length > 0){
         const arrayOfCards = _.map(props.data, (d) => <CardCard id={d.id} title={d.title} description={d.description}/>
         )
-        console.log(arrayOfCards)
         return (
-            arrayOfCards
+            <div className="display-flex">
+                {arrayOfCards}
+            </div>
         )
     }
     else{
@@ -30,7 +32,7 @@ const CardCard = (props) => {
     return(
         <Card raised={true} style={{width: '250px', marginTop: '20px'}} id={props.id}>
             <CardHeader title={props.title}/>
-            <CardContent>
+            <CardContent className="cardStyling">
                 {props.description}
             </CardContent>
         </Card>

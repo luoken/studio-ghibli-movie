@@ -31,3 +31,22 @@
     transform: rotate(360deg);
   }
 }
+
+.display-flex{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+  justify-content: space-around;
+
+  /* padding-left: 20px;
+  padding-right: 40px; */
+  flex-wrap: wrap;
+}
+
+.cardStyling{
+  height: 150px;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  
+}
