@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Body from './components/Body';
+import Header from './components/Header'
+import axios from 'axios';
+import _ from 'lodash';
+
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      movies: [],
+      isData: false
+    }
+  }
+
+  componentDidMount(){
+    fetch('https://ghibliapi.herokuapp.com/films').then(response => response.json()).then(data => this.setState({
+      movies: data
+    }))
+
+    
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header/>
+        <Body data={this.state.movies} isData={this.state.isData}/>
       </div>
     );
   }
