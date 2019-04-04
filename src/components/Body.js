@@ -14,7 +14,7 @@ const Body = (props) => {
         const arrayOfCards = _.map(props.data, (d) => <CardCard id={d.id} title={d.title} description={d.description}/>
         )
         return (
-            <div className="display-flex">
+            <div className="display-flex bodyStyling">
                 {arrayOfCards}
             </div>
         )
@@ -31,7 +31,7 @@ const Body = (props) => {
 const CardCard = (props) => {
     return(
         <Card raised={true} style={{marginTop: '20px'}} id={props.id} className="cardWidth">
-            <CardHeader title={props.title}/>
+            <CardHeader title={props.title} className="cardHeaderStyle"/>
             <CardContent className="cardStyling">
                 {props.description}
             </CardContent>

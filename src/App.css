@@ -47,9 +47,21 @@
 .cardStyling{
   height: 150px;
   overflow-y: scroll;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .cardWidth{
   width: 400px;
+  margin-bottom: 20px;
+  opacity: .85;
+}
+
+.cardHeaderStyle{
+  background-color: #E0F7FA;
+}
+
+.bodyStyling{
+  background-image: linear-gradient(to bottom right, #B2EBF2 40%, #00B8D4 75%);
+  margin-top: -20px;
 }

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Body from './components/Body';
 import Header from './components/Header'
-import axios from 'axios';
-import _ from 'lodash';
 
 
 class App extends Component {
@@ -28,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Body data={this.state.movies} isData={this.state.isData}/>
+        <Body data={this.state.movies} isData={this.state.isData} className="bodyStyling"/>
       </div>
     );
   }
