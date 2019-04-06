@@ -54,7 +54,7 @@
 .cardWidth{
   width: 400px;
   margin-bottom: 20px;
-  opacity: .85;
+  opacity: .75;
 }
 
 .cardHeaderStyle{
@@ -64,4 +64,10 @@
 .bodyStyling{
   background-image: linear-gradient(to bottom right, #B2EBF2 40%, #00B8D4 75%);
   margin-top: -20px;
+}
+
+.cardWidth:hover{
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
